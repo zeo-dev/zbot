@@ -1,0 +1,27 @@
+{
+  "name": "zbot",
+  "version": "1.0.0",
+  "description": "zBot, get information about in-game players within Discord.",
+  "main": "start.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zeo-dev/zbot.git"
+  },
+  "author": "Zeo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zeo-dev/zbot/issues"
+  },
+  "homepage": "https://github.com/zeo-dev/zbot#readme",
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "discord.js": "^11.5.1",
+    "dotenv": "^8.1.0",
+    "klaw": "^3.0.0",
+    "mysql": "^2.17.1",
+    "path": "^0.12.7"
+  }
+}
