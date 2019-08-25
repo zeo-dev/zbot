@@ -18,7 +18,6 @@ class message {
 
         var args = message.content.slice(prefix.length).trim().split(' ');
         var command = args.shift().toLowerCase();
-        console.log(args)
 
         let cmd;
         if(this.client.commands.has(command)){
@@ -26,7 +25,7 @@ class message {
         }
 
         if(cmd && !message.guild && cmd.options.guildOnly) return message.channel.send(":x: This command is guild only!");
-        if(cmd && message.author.id !== message.guild.owner.id) return message.channel.send(":x: You don't have enough permissions to run this command!");
+        if(cmd && message.author.id !== message.guild.owner.id && cmd.options.guildOwnerOnly) return message.channel.send(":x: You don't have enough permissions to run this command!");
 
         if(cmd){
             try {
